@@ -1,0 +1,164 @@
+/**
+ * Design Tokens - 设计系统变量
+ *
+ * 从原项目的12个HTML文件中提取的统一设计系统
+ * 所有组件应优先使用这些变量,避免硬编码值
+ */
+
+:root {
+  /* ========================================
+     颜色系统 (Color System)
+     ======================================== */
+
+  /* 主题色 */
+  --primary-green: #34c759;
+  --primary-blue: #0071e3;
+  --primary-purple: #af52de;
+  --primary-orange: #ff9500;
+  --primary-red: #ff3b30;
+
+  /* 语义颜色 */
+  --background: #fbfbfd;
+  --surface: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --border-light: #d2d2d7;
+
+  /* 状态颜色 */
+  --success: #34c759;
+  --warning: #ff9500;
+  --error: #ff3b30;
+  --info: #0071e3;
+
+  /* ========================================
+     间距系统 (Spacing System)
+     ======================================== */
+
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+
+  /* 网格间距 */
+  --gap-sm: 12px;
+  --gap-md: 24px;
+  --gap-lg: 32px;
+
+  /* ========================================
+     阴影系统 (Shadow System)
+     ======================================== */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* ========================================
+     圆角系统 (Border Radius)
+     ======================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     字体系统 (Typography)
+     ======================================== */
+
+  /* 字体族 */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                      'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono',
+                      'Courier New', monospace;
+
+  /* 字体大小 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+
+  /* 字体粗细 */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* 行高 */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+
+  /* ========================================
+     层级系统 (Z-Index)
+     ======================================== */
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-notification: 800;
+  --z-navigation: 1000;
+
+  /* ========================================
+     动画系统 (Animation)
+     ======================================== */
+
+  /* 过渡时长 */
+  --transition-fast: 150ms;
+  --transition-base: 300ms;
+  --transition-slow: 500ms;
+
+  /* 缓动函数 */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ========================================
+     容器宽度 (Container Width)
+     ======================================== */
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-2xl: 1400px;
+
+  /* ========================================
+     断点 (Breakpoints) - 用于媒体查询
+     ======================================== */
+
+  /* 这些值应在CSS媒体查询中使用 */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* ========================================
+   深色模式支持 (可选,将来扩展)
+   ======================================== */
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1d1d1f;
+    --surface: #2c2c2e;
+    --text-primary: #ffffff;
+    --text-secondary: #98989d;
+    --border-light: #48484a;
+  }
+}
+*/

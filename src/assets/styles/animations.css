@@ -1,0 +1,376 @@
+/**
+ * Animation Library
+ *
+ * 统一的动画和过渡效果库
+ * 从原项目中提取的常用动画模式
+ */
+
+/* ========================================
+   淡入淡出动画 (Fade Animations)
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-base) var(--ease-out) forwards;
+}
+
+.fade-out {
+  animation: fadeOut var(--transition-base) var(--ease-out) forwards;
+}
+
+/* ========================================
+   滑入动画 (Slide Animations)
+   ======================================== */
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp var(--transition-base) var(--ease-out);
+}
+
+.slide-in-down {
+  animation: slideInDown var(--transition-base) var(--ease-out);
+}
+
+.slide-in-left {
+  animation: slideInLeft var(--transition-base) var(--ease-out);
+}
+
+.slide-in-right {
+  animation: slideInRight var(--transition-base) var(--ease-out);
+}
+
+/* ========================================
+   缩放动画 (Scale Animations)
+   ======================================== */
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.scale-in {
+  animation: scaleIn var(--transition-base) var(--ease-out);
+}
+
+.scale-out {
+  animation: scaleOut var(--transition-base) var(--ease-out);
+}
+
+/* ========================================
+   弹跳动画 (Bounce Animations)
+   ======================================== */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce var(--transition-slow) var(--ease-bounce) infinite;
+}
+
+/* ========================================
+   旋转动画 (Rotate Animations)
+   ======================================== */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 1s linear infinite;
+}
+
+/* ========================================
+   脉冲动画 (Pulse Animation)
+   ======================================== */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pulse {
+  animation: pulse 2s var(--ease-in-out) infinite;
+}
+
+/* ========================================
+   摇晃动画 (Shake Animation)
+   ======================================== */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake var(--transition-slow) var(--ease-in-out);
+}
+
+/* ========================================
+   过渡类 (Transition Classes)
+   ======================================== */
+
+/* 通用过渡 */
+.transition-all {
+  transition: all var(--transition-base) var(--ease-out);
+}
+
+.transition-fast {
+  transition: all var(--transition-fast) var(--ease-out);
+}
+
+.transition-slow {
+  transition: all var(--transition-slow) var(--ease-out);
+}
+
+/* 特定属性过渡 */
+.transition-opacity {
+  transition: opacity var(--transition-base) var(--ease-out);
+}
+
+.transition-transform {
+  transition: transform var(--transition-base) var(--ease-out);
+}
+
+.transition-colors {
+  transition:
+    background-color var(--transition-base) var(--ease-out),
+    border-color var(--transition-base) var(--ease-out),
+    color var(--transition-base) var(--ease-out);
+}
+
+/* ========================================
+   悬停效果 (Hover Effects)
+   ======================================== */
+
+/* 卡片悬停提升 */
+.hover-lift {
+  transition:
+    transform var(--transition-base) var(--ease-out),
+    box-shadow var(--transition-base) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 悬停放大 */
+.hover-scale {
+  transition: transform var(--transition-base) var(--ease-out);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* 悬停亮度 */
+.hover-brightness {
+  transition: filter var(--transition-base) var(--ease-out);
+}
+
+.hover-brightness:hover {
+  filter: brightness(1.1);
+}
+
+/* ========================================
+   加载动画 (Loading Animations)
+   ======================================== */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-light);
+  border-top-color: var(--primary-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* 骨架屏加载 */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--border-light) 25%,
+    var(--surface) 50%,
+    var(--border-light) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ========================================
+   进入/离开过渡 (Vue Transitions)
+   ======================================== */
+
+/* Vue <transition> 通用过渡类 */
+.v-enter-active,
+.v-leave-active {
+  transition: all var(--transition-base) var(--ease-out);
+}
+
+.v-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* 淡入淡出 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-base) var(--ease-out);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 滑动 */
+.slide-fade-enter-active {
+  transition: all var(--transition-base) var(--ease-out);
+}
+
+.slide-fade-leave-active {
+  transition: all var(--transition-fast) var(--ease-in);
+}
+
+.slide-fade-enter-from {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-20px);
+  opacity: 0;
+}

@@ -1,0 +1,116 @@
+{
+  "frameworks": [
+    {
+      "id": "scqa",
+      "name": "SCQA结构思维",
+      "icon": "📋",
+      "desc": "将内容拆解为：背景(S)-矛盾(C)-问题(Q)-答案(A)，快速理解核心逻辑",
+      "tags": ["基础", "必备", "5分钟"],
+      "detail": "识别文章的情境、冲突、核心问题和解决方案，建立清晰的思维框架"
+    },
+    {
+      "id": "5w2h",
+      "name": "5W2H完整性检查",
+      "icon": "🔍",
+      "desc": "检查信息完整性：What, Why, Who, When, Where, How, How much",
+      "tags": ["基础", "信息梳理", "10分钟"],
+      "detail": "确保不遗漏关键信息，识别文章的信息盲点"
+    },
+    {
+      "id": "critical",
+      "name": "批判性思维",
+      "icon": "⚖️",
+      "desc": "评估论证质量、识别逻辑谬误、验证证据充分性",
+      "tags": ["评估", "质量检查", "20分钟"],
+      "detail": "不盲目接受观点，系统性评价论证的可信度"
+    },
+    {
+      "id": "inversion",
+      "name": "逆向思维",
+      "icon": "🔄",
+      "desc": "反向思考'如何失败'，识别风险和潜在问题",
+      "tags": ["风险", "实践", "15分钟"],
+      "detail": "从失败角度思考，发现容易忽略的风险点"
+    },
+    {
+      "id": "mental-models",
+      "name": "心智模型",
+      "icon": "🧠",
+      "desc": "从物理学、生物学、心理学、经济学等多学科视角分析",
+      "tags": ["多维", "创新", "30分钟"],
+      "detail": "运用不同学科的思维模型，获得独特洞察"
+    },
+    {
+      "id": "first-principles",
+      "name": "第一性原理",
+      "icon": "⚡",
+      "desc": "拆解基本假设，回到问题本质，重新构建理解",
+      "tags": ["本质", "深度", "25分钟"],
+      "detail": "剥离表象，从根本原理重新思考问题"
+    },
+    {
+      "id": "systems",
+      "name": "系统思维",
+      "icon": "🔗",
+      "desc": "识别关系网络、反馈回路、杠杆点，看到全局",
+      "tags": ["关系", "整体", "30分钟"],
+      "detail": "理解要素间的相互作用和系统性影响"
+    },
+    {
+      "id": "six-hats",
+      "name": "六顶思考帽",
+      "icon": "🎨",
+      "desc": "从6个维度思考：事实、情感、风险、收益、创意、流程",
+      "tags": ["全面", "创新", "25分钟"],
+      "detail": "避免思维盲点，全方位评估问题"
+    },
+    {
+      "id": "comparison",
+      "name": "跨源对比",
+      "icon": "📊",
+      "desc": "对比多个来源，识别共识与分歧，形成综合观点",
+      "tags": ["研究", "验证", "40分钟"],
+      "detail": "通过多源验证，提高结论可靠性"
+    },
+    {
+      "id": "swot",
+      "name": "SWOT分析",
+      "icon": "📈",
+      "desc": "评估优势(S)、劣势(W)、机会(O)、威胁(T)",
+      "tags": ["策略", "决策", "20分钟"],
+      "detail": "全面评估内外部因素，支持战略决策"
+    }
+  ],
+  "presetCombinations": {
+    "quick": {
+      "name": "快速分析",
+      "description": "适合5-10分钟快速阅读",
+      "frameworks": ["scqa", "5w2h"]
+    },
+    "critical": {
+      "name": "批判性评估",
+      "description": "评估文章质量和可信度",
+      "frameworks": ["critical", "inversion", "5w2h"]
+    },
+    "deep": {
+      "name": "深度理解",
+      "description": "深入理解复杂主题",
+      "frameworks": ["first-principles", "systems", "mental-models"]
+    },
+    "innovation": {
+      "name": "创新思考",
+      "description": "激发新想法和视角",
+      "frameworks": ["six-hats", "first-principles", "scqa"]
+    },
+    "decision": {
+      "name": "决策支持",
+      "description": "支持战略决策制定",
+      "frameworks": ["swot", "inversion", "systems"]
+    },
+    "research": {
+      "name": "研究分析",
+      "description": "系统性研究复杂主题",
+      "frameworks": ["comparison", "critical", "systems"]
+    }
+  }
+}
